@@ -107,6 +107,7 @@ a:hover {
   background-position: center;
 }
 
+/* Навигационный бар */
 .header__navbar-flex {
   padding: 55px 0;
   display: flex;
@@ -178,8 +179,41 @@ a:hover {
   transition: 0.3s all;
 }
 
+/* О приложении */
+.about-app__flex {
+  padding: 95px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.about-app__content {
+  display: flex;
+  flex-direction: column;
+  max-width: 445px;
+}
+
+.about-app__h2 {
+  margin-bottom: 40px;
+}
+
+.about-app__p {
+  font-size: 14px;
+  line-height: 140%;
+  color: var(--color-black);
+  margin-bottom: 20px;
+}
+
+.about-app__link {
+  font-size: 14px;
+  line-height: 140%;
+  color: var(--color-pink);
+}
+
+
 /* Возможности */
 .capability {
+  padding-top: 65px;
   background-color: #fafafa;
   min-height: 660px;
 }
