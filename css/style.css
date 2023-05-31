@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato&family=Roboto:wght@400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Roboto:wght@400;500;700&display=swap");
 
 :root {
-  --color-white: #FFFFFF;
-  --color-orange: #EE3D1B;
-  --color-pink: #ED4C5C;
+  --color-white: #ffffff;
+  --color-orange: #ee3d1b;
+  --color-pink: #ed4c5c;
   --color-black: #000;
 }
 
@@ -36,7 +36,7 @@ img {
 
 body {
   margin: 0;
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -75,7 +75,7 @@ a:hover {
   color: #101010;
 }
 
-.bttn{
+.bttn {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -98,10 +98,14 @@ a:hover {
 } */
 
 /* Шапка */
-.header .container{
+.header .container {
   min-height: 780px;
-  background-image: linear-gradient(90deg, rgba(213, 32, 71, 0.8) 0%, rgba(238, 61, 27, 0.8) 100%),
-  url(../img/header_bg_img.png);
+  background-image: linear-gradient(
+      90deg,
+      rgba(213, 32, 71, 0.8) 0%,
+      rgba(238, 61, 27, 0.8) 100%
+    ),
+    url(../img/header_bg_img.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -210,7 +214,6 @@ a:hover {
   color: var(--color-pink);
 }
 
-
 /* Возможности */
 .capability {
   padding-top: 65px;
@@ -272,6 +275,197 @@ a:hover {
   color: #af3944;
 }
 
+/* Технологии */
+.technologies__h2 {
+  text-align: center;
+  padding-top: 65px;
+  margin-bottom: 55px;
+}
+
+.technologies__cards {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 120px;
+}
+
+.technologies__card {
+  text-align: center;
+}
+
+.technologies__images {
+  margin-bottom: 10px;
+}
+
+.technologies__cards div:nth-child(1) .technologies__images {
+  background-image: url(../img/technologies_bg_img_1.svg);
+  background-repeat: no-repeat;
+  background-position: top;
+  padding-top: 40px;
+}
+.technologies__cards div:nth-child(2) .technologies__images {
+  background-image: url(../img/technologies_bg_img_2.svg);
+  background-repeat: no-repeat;
+  background-position: top;
+  padding-top: 40px;
+}
+.technologies__cards div:nth-child(3) .technologies__images {
+  background-image: url(../img/technologies_bg_img_3.svg);
+  background-repeat: no-repeat;
+  background-position: top;
+  padding-top: 40px;
+}
+.technologies__cards div:nth-child(4) .technologies__images {
+  background-image: url(../img/technologies_bg_img_4.svg);
+  background-repeat: no-repeat;
+  background-position: top;
+  padding-top: 40px;
+}
+
+.technologies__img {
+  margin: 0 auto;
+  height: 80px;
+  width: 80px;
+}
+
+.technologies__h3 {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  color: #101010;
+  margin-bottom: 10px;
+}
+
+.technologies__p {
+  max-width: 190px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: var(--color-black);
+}
+
+/* Приложения */
+.app {
+  background-color: var(--color-pink);
+}
+
+.app__flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 95px 0;
+}
+
+.app__content {
+  max-width: 450px;
+}
+
+.app__h2 {
+  color: var(--color-white);
+  margin-bottom: 40px;
+}
+
+.app__p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  color: var(--color-white);
+  margin-bottom: 40px;
+}
+
+.app__icons {
+  display: flex;
+  gap: 25px;
+}
+
+/* Связаться с нами */
+.contact-us__flex {
+  padding-top: 150px;
+  margin-bottom: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contact-us__content {
+  max-width: 440px;
+}
+
+.contact-us__h2 {
+  margin-bottom: 70px;
+}
+
+.contact-us__p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  color: var(--color-black);
+}
+
+.contact-us__form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.contact-us__input {
+  padding-left: 30px !important;
+  box-sizing: border-box !important;
+  width: 540px !important;
+  height: 60px !important;
+  border: 1px solid #333333 !important;
+  border-radius: 6px !important;
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-size: 16px !important;
+  line-height: 19px;
+  color: rgba(19, 39, 67, 0.5);
+}
+
+.contact-us__button{
+  width: 160px;
+  height: 50px;
+  border: none;
+  background: var(--color-pink);
+  border-radius: 6px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: var(--color-white);
+}
+
+/* Подвал */
+.footer {
+  background-color: #fafafa;
+  padding: 45px 0;
+  font-family: 'Lato';
+  font-style: normal;
+  color: #101010;
+}
+
+.footer__title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  margin-bottom: 20px;
+}
+
+.footer__adress {
+  font-family: 'Lato';
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 150%;
+  margin-bottom: 45px;
+}
+
+.footer__company {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+
+
 @media screen and (max-width: 1440px) {
   .container {
     padding: 65px 15px;
@@ -300,8 +494,8 @@ a:hover {
     padding: 10px;
     width: 90%;
     height: auto;
-    left: 50%; 
-    transform:translateX(-50%); 
+    left: 50%;
+    transform: translateX(-50%);
   }
   .capability__cards {
     row-gap: 100px;
