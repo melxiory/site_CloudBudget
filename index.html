@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
     />
@@ -15,167 +15,267 @@
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/materialize.min.css" />
     <link rel="stylesheet" href="css/style.css" />
-  <title>Cloud Budget</title>
-</head>
-<body>
-  <!-- Шапка -->
-  <header class="header">
-    <div class="container">
-      <!-- Навигационный бар -->
-      <div class="header__navbar">
-        <div class="container-content">
-          <div class="header__navbar-flex">
-            <img src="img/logo.svg" alt="HeaderLogoImage" class="header__logo">
-            <ul class="header__list-links">
-              <li class="header__link"><a href="#">ОБЗОР</a></li>
-              <li class="header__link"><a href="#">ОСОБЕННОСТИ</a></li>
-              <li class="header__link"><a href="#">ТЕХНОЛОГИЯ</a></li>
-              <li class="header__link"><a href="#">КОНТАКТЫ</a></li>
-              <li class="header__link"><a href="#">ВОЙТИ</a></li>
-            </ul>
-            <a href="" class="header__navbar-btn bttn">ВХОД</a>
+    <title>Cloud Budget</title>
+  </head>
+  <body>
+    <!-- Шапка -->
+    <header class="header">
+      <div class="container">
+        <!-- Навигационный бар -->
+        <div class="header__navbar">
+          <div class="container-content">
+            <div class="header__navbar-flex">
+              <img
+                src="img/logo.svg"
+                alt="HeaderLogoImage"
+                class="header__logo"
+              />
+              <ul class="header__list-links">
+                <li class="header__link"><a href="#">ОБЗОР</a></li>
+                <li class="header__link"><a href="#">ОСОБЕННОСТИ</a></li>
+                <li class="header__link"><a href="#">ТЕХНОЛОГИЯ</a></li>
+                <li class="header__link"><a href="#">КОНТАКТЫ</a></li>
+                <li class="header__link"><a href="#">ВОЙТИ</a></li>
+              </ul>
+              <a href="" class="header__navbar-btn bttn">ВХОД</a>
+              <div class="navbar__burger">
+                <a href="javascript:void(0)" onclick="openNav()" 
+                  ><i class="material-icons">menu</i></a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Боковая панрель -->
+        <div id="mySidenav" class="mysidenav">
+          <a href="javascript:void(0)" class="closebtn mysidenav__link" onclick="closeNav()">&times;</a>
+          <a class="mysidenav__link" href="#">ОБЗОР</a>
+          <a class="mysidenav__link" href="#">ОСОБЕННОСТИ</a>
+          <a class="mysidenav__link" href="#">ТЕХНОЛОГИЯ</a>
+          <a class="mysidenav__link" href="#">КОНТАКТЫ</a>
+          <a class="mysidenav__link" href="#">ВОЙТИ</a>
+          <a href="" class="mysidenav__navbar-btn bttn">ВХОД</a>
+        </div>
+        
+        <div id="myCanvasNav" class="myoverlay"></div>
+
+        <div class="header__content">
+          <h1 class="header__h1">CloudBudget</h1>
+          <p class="header_p">
+            Управление бюджетом в для всех.<br />
+            Всего 69,95 € в месяц после 7-дневной пробной версии за 4,99 €
+          </p>
+          <a href="" class="header__content-btn bttn">ПОПРОБОВАТЬ</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- О приложении -->
+    <section class="about-app">
+      <div class="container-content">
+        <div class="about-app__flex">
+          <div class="about-app__content">
+            <h2 class="about-app__h2 text-h2">
+              Простое приложение для управления бюджетом
+            </h2>
+            <p class="about-app__p">
+              Наше приложение создано, чтобы вы могли в реальном времени
+              управлять своим бюджетом и расходами в режиме онлайн с любого
+              устройства. Оно предоставляет подробные отчеты о доходах и
+              расходах с графиками, чтобы вы сразу могли увидеть расходы и
+              бюджет. Читайте ниже, чтобы узнать больше.
+            </p>
+            <a href="#" class="about-app__link">Узнать подробнее</a>
+          </div>
+          <img
+            src="img/about-app_img.png"
+            alt="AboutAppImage"
+            class="about-app__img"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Возможности -->
+    <section class="capability">
+      <div class="container-content">
+        <h2 class="capability__h2">Возможности</h2>
+        <div class="capability__cards">
+          <div class="capability__card card1">
+            <div class="capability__inside">
+              <h3 class="capability__h3">Поддерживает все валюты и карты</h3>
+              <p class="capability__p">
+                Мы поддерживаем все популярные валюты и полностью настраиваем,
+                чтобы добавить
+              </p>
+              <a class="capability__link" href="">Подробнее</a>
+            </div>
+          </div>
+          <div class="capability__card card2">
+            <div class="capability__inside">
+              <h3 class="capability__h3">
+                Управляйте своими расходами на ходу
+              </h3>
+              <p class="capability__p">
+                Вы можете получить доступ к своей учетной записи из любой точки
+                мира на любом устройстве
+              </p>
+              <a class="capability__link" href="">Подробнее</a>
+            </div>
+          </div>
+          <div class="capability__card card3">
+            <div class="capability__inside">
+              <h3 class="capability__h3">
+                Управление бюджетом осуществляется в облаке
+              </h3>
+              <p class="capability__p">
+                Наше приложение создано для того, чтобы вы могли управлять
+                управлять своим бюджетом
+              </p>
+              <a class="capability__link" href="">Подробнее</a>
+            </div>
           </div>
         </div>
       </div>
+    </section>
 
-      <div class="header__content">
-        <h1 class="header__h1">CloudBudget</h1>
-        <p class="header_p">Управление бюджетом в для всех.<br> 
-          Всего 69,95 € в месяц после 7-дневной 
-          пробной версии за 4,99 €</p>
-        <a href="" class="header__content-btn bttn">ПОПРОБОВАТЬ</a>
-      </div>
-    </div>
-  </header>
-
-  <!-- О приложении -->
-  <section class="about-app">
-    <div class="container-content">
-      <div class="about-app__flex">
-        <div class="about-app__content">
-          <h2 class="about-app__h2 text-h2">Простое приложение для управления бюджетом</h2>
-          <p class="about-app__p">Наше приложение создано, чтобы вы могли в реальном времени управлять своим бюджетом и расходами в режиме онлайн с любого устройства. Оно предоставляет подробные отчеты о доходах и расходах с графиками, чтобы вы сразу могли увидеть расходы и бюджет. Читайте ниже, чтобы узнать больше.</p>
-          <a href="#" class="about-app__link">Узнать подробнее</a>
-        </div>
-        <img src="img/about-app_img.png" alt="AboutAppImage" class="about-app__img">
-      </div>
-    </div>
-  </section>
-
-  <!-- Возможности -->
-  <section class="capability">
-    <div class="container-content">
-      <h2 class="capability__h2">Возможности</h2>
-      <div class="capability__cards">
-        <div class="capability__card card1">
-          <div class="capability__inside">
-            <h3 class="capability__h3">Поддерживает все валюты и карты</h3>
-            <p class="capability__p">Мы поддерживаем все популярные валюты и полностью настраиваем, чтобы добавить</p>
-            <a class="capability__link" href="">Подробнее</a>
+    <!-- Технологии -->
+    <section class="technologies">
+      <div class="container-content">
+        <h2 class="technologies__h2 text-h2">Технологии</h2>
+        <div class="technologies__cards">
+          <div class="technologies__card">
+            <div class="technologies__images">
+              <img
+                src="img/technologies_img_1.svg"
+                alt="TechnologiesImage"
+                class="technologies__img"
+              />
+            </div>
+            <h3 class="technologies__h3"><a href="#">Облачное хранение</a></h3>
+            <p class="technologies__p">
+              Доступ из любой точки мира с любого устройства
+            </p>
           </div>
-        </div>
-        <div class="capability__card card2">
-          <div class="capability__inside">
-            <h3 class="capability__h3">Управляйте своими расходами на ходу</h3>
-            <p class="capability__p">Вы можете получить доступ к своей учетной записи из любой точки мира на любом устройстве</p>
-            <a class="capability__link" href="">Подробнее</a>
+          <div class="technologies__card">
+            <div class="technologies__images">
+              <img
+                src="img/technologies_img_2.svg"
+                alt="TechnologiesImage"
+                class="technologies__img"
+              />
+            </div>
+            <h3 class="technologies__h3"><a href="#">Безопастность</a></h3>
+            <p class="technologies__p">
+              Вся информация хранится на защищенных облачных серверах
+            </p>
           </div>
-        </div>
-        <div class="capability__card card3">
-          <div class="capability__inside">
-            <h3 class="capability__h3">Управление бюджетом осуществляется в облаке</h3>
-            <p class="capability__p">Наше приложение создано для того, чтобы вы могли управлять управлять своим бюджетом</p>
-            <a class="capability__link" href="">Подробнее</a>
+          <div class="technologies__card">
+            <div class="technologies__images">
+              <img
+                src="img/technologies_img_3.svg"
+                alt="TechnologiesImage"
+                class="technologies__img"
+              />
+            </div>
+            <h3 class="technologies__h3"><a href="#">PDF Отчеты</a></h3>
+            <p class="technologies__p">
+              Скачивайте ваши отчеты в удобном формате PDF
+            </p>
           </div>
-        </div>
-      </div>
-    </div> 
-  </section>
-
-  <!-- Технологии -->
-  <section class="technologies">
-    <div class="container-content">
-      <h2 class="technologies__h2 text-h2">Технологии</h2>
-      <div class="technologies__cards">
-        <div class="technologies__card">
-          <div class="technologies__images">
-            <img src="img/technologies_img_1.svg" alt="TechnologiesImage" class="technologies__img">
+          <div class="technologies__card">
+            <div class="technologies__images">
+              <img
+                src="img/technologies_img_4.svg"
+                alt="TechnologiesImage"
+                class="technologies__img"
+              />
+            </div>
+            <h3 class="technologies__h3"><a href="#">CSV  Отчеты</a></h3>
+            <p class="technologies__p">
+              Скачивайте ваши отчеты в удобном формате CSV
+            </p>
           </div>
-          <h3 class="technologies__h3">Облачное хранение</h3>
-          <p class="technologies__p">Доступ из любой точки мира с любого устройства</p>
-        </div>
-        <div class="technologies__card">
-          <div class="technologies__images">
-            <img src="img/technologies_img_2.svg" alt="TechnologiesImage" class="technologies__img">
-          </div>
-          <h3 class="technologies__h3">Безопастность</h3>
-          <p class="technologies__p">Вся  информация хранится на защищенных облачных серверах</p>
-        </div>
-        <div class="technologies__card">
-          <div class="technologies__images">
-            <img src="img/technologies_img_3.svg" alt="TechnologiesImage" class="technologies__img">
-          </div>
-          <h3 class="technologies__h3">PDF Отчеты</h3>
-          <p class="technologies__p">Скачивайте ваши отчеты в удобном формате PDF</p>
-        </div>
-        <div class="technologies__card">
-          <div class="technologies__images">
-            <img src="img/technologies_img_4.svg" alt="TechnologiesImage" class="technologies__img">
-          </div>
-          <h3 class="technologies__h3">CSV  Отчеты</h3>
-          <p class="technologies__p">Скачивайте ваши отчеты в удобном формате CSV</p>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Моб. приложения -->
-  <section class="app">
-    <div class="container-content">
-      <div class="app__flex">
-        <div class="app__content">
-          <h2 class="app__h2 text-h2">Сосредоточьтесь на экономии денег</h2>
-          <p class="app__p">Мы помогаем вам отслеживать ваши привычки в расходах, чтобы вы могли легко определить и сократить ненужные расходы. Просто присоединяйтесь сегодня, чтобы начать!</p>
-          <div class="app__icons">
-            <a href="#"><img src="img/app__playmarket.svg" alt="AppImage" class="app__img"></a>
-            <a href="#"><img src="img/app__appstore.svg" alt="AppImage" class="app__img"></a>
+    <!-- Моб. приложения -->
+    <section class="app">
+      <div class="container-content">
+        <div class="app__flex">
+          <div class="app__content">
+            <h2 class="app__h2 text-h2">Сосредоточьтесь на экономии денег</h2>
+            <p class="app__p">
+              Мы помогаем вам отслеживать ваши привычки в расходах, чтобы вы
+              могли легко определить и сократить ненужные расходы. Просто
+              присоединяйтесь сегодня, чтобы начать!
+            </p>
+            <div class="app__icons">
+              <a href="#"
+                ><img
+                  src="img/app__playmarket.svg"
+                  alt="AppImage"
+                  class="app__img"
+              /></a>
+              <a href="#"
+                ><img
+                  src="img/app__appstore.svg"
+                  alt="AppImage"
+                  class="app__img"
+              /></a>
+            </div>
           </div>
+          <img
+            src="img/app__main_img.png"
+            alt="AppMainImage"
+            class="app__main-img"
+          />
         </div>
-        <img src="img/app__main_img.png" alt="AppMainImage" class="app__main-img">
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Связаться с нами -->
-  <section class="contact-us">
-    <div class="container-content">
-      <div class="contact-us__flex">
-        <div class="contact-us__content">
-          <h2 class="contact-us__h2 text-h2">Напишите нам</h2>
-          <p class="contact-us__p">Остались вопросы или опасения? Просто заполните форму ниже, и наша служба поддержки свяжется с вами в течение 24 часов.</p>
+    <!-- Связаться с нами -->
+    <section class="contact-us">
+      <div class="container-content">
+        <div class="contact-us__flex">
+          <div class="contact-us__content">
+            <h2 class="contact-us__h2 text-h2">Напишите нам</h2>
+            <p class="contact-us__p">
+              Остались вопросы или опасения? Просто заполните форму ниже, и наша
+              служба поддержки свяжется с вами в течение 24 часов.
+            </p>
+          </div>
+          <form action="" class="contact-us__form">
+            <input type="text" placeholder="Имя" class="contact-us__input" />
+            <input
+              type="tel"
+              name="Phone"
+              id="Phone"
+              placeholder="Телефон"
+              class="contact-us__input"
+            />
+            <button class="contact-us__button" type="submit">Отправить</button>
+          </form>
         </div>
-        <form action="" class="contact-us__form">
-          <input type="text" placeholder="Имя" class="contact-us__input">
-          <input type="tel" name="Phone" id="Phone" placeholder="Телефон" class="contact-us__input"> 
-          <button class="contact-us__button" type="submit">Отправить</button>
-        </form>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Подвал -->
-  <footer class="footer">
-    <div class="container-content">
-      <p class="footer__title">Адрес</p>
-      <p class="footer__adress">Pipang Ltd, Griva Digeni,<br>
-        81-83 Jacovides Tower, 1st Floor <br>
-        1090 Picosia USA</p>
-      <p class="footer__company">Copyright 2021 CloudBudget</p>
-    </div>
-  </footer>
+    <!-- Подвал -->
+    <footer class="footer">
+      <div class="container-content">
+        <p class="footer__title">Адрес</p>
+        <p class="footer__adress">
+          Pipang Ltd, Griva Digeni,<br />
+          81-83 Jacovides Tower, 1st Floor <br />
+          1090 Picosia USA
+        </p>
+        <p class="footer__company">Copyright 2021 CloudBudget</p>
+      </div>
+    </footer>
 
-
-  <script src="js/materialize.min.js"></script>
-  <script src="js/main.js"></script>
-</body>
+    <script src="js/materialize.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
 </html>

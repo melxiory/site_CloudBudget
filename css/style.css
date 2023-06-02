@@ -145,6 +145,74 @@ a:hover {
   transition: 0.3s all;
 }
 
+.navbar__burger{
+  display: none;
+}
+
+.material-icons{
+  padding-top: 5px;
+  font-size: 30px;
+  color: var(--color-white);
+}
+
+/* Боковое меню навигации */
+.mysidenav {
+  height: 100%; /* 100% Полный рост */
+  width: 0; /* 0 ширина - измените это с помощью JavaScript */
+  position: fixed; /* Оставаться на месте */
+  z-index: 4; /* Оставайтесь на вершине */
+  top: 0; /* Оставайтесь на вершине */
+  left: 0;
+  background-color: #111; /* Черный */
+  overflow-x: hidden; /* Отключить горизонтальную прокрутку */
+  padding-top: 60px; /* Поместите содержимое 60px сверху */
+  transition: 0.5s; /* 0.5 секунд эффект перехода, чтобы скользить в sidenav */
+}
+
+.mysidenav__navbar-btn{
+  width: 200px;
+  height: 40px;
+  margin: 30px 20px;
+}
+
+.mysidenav__link {
+  padding: 8px 8px 8px 32px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 28px;
+  text-transform: uppercase;
+  color: var(--color-white);
+  display: block;
+  transition: 0.3s;
+}
+
+.mysidenav__link:hover {
+  color: #f1f1f1;
+}
+
+.mysidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.myoverlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0, 0.9);
+  overflow-y: auto;
+  overflow-x: hidden;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
 .header__content {
   text-align: center;
 }
@@ -283,8 +351,10 @@ a:hover {
 }
 
 .technologies__cards {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  gap: 50px;
   margin-bottom: 120px;
 }
 
@@ -422,6 +492,7 @@ a:hover {
 }
 
 .contact-us__button{
+  cursor: pointer;
   width: 160px;
   height: 50px;
   border: none;
@@ -433,6 +504,17 @@ a:hover {
   text-transform: uppercase;
   color: var(--color-white);
 }
+
+.contact-us__button:hover{
+  opacity: 0.8;
+}
+
+.contact-us__button:active {
+  background: var(--color-white);
+  border: 1px solid var(--color-pink);
+  color: var(--color-pink);
+}
+
 
 /* Подвал */
 .footer {
@@ -466,26 +548,132 @@ a:hover {
 
 
 
-@media screen and (max-width: 1440px) {
-  .container {
-    padding: 65px 15px;
-  }
-}
 @media screen and (max-width: 1200px) {
-  .container {
+  .capability .container-content {
     padding-bottom: 200px;
   }
   .capability__cards {
     grid-template-columns: repeat(2, 1fr);
     row-gap: 150px;
   }
+
+  .technologies__cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
+
+@media screen and (max-width: 1050px) {
+  .contact-us__flex {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .contact-us__form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+  }
+
+  .contact-us__h2 {
+    margin-bottom: 30px;
+  }
+  
+  .contact-us__p {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 910px) {
+  .header__list-links {
+    display: none;
+  }
+  
+  .header__navbar-btn {
+    display: none;
+  }
+  
+  .navbar__burger{
+    display: block;
+  }
+  .about-app__flex {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+  
+  .about-app__content {
+    text-align: center;
+  }
+
+  .app {
+    background-color: var(--color-pink);
+  }
+  
+  .app__flex {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .app__icons {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+}
+
 @media screen and (max-width: 800px) {
   .capability__cards {
     grid-template-columns: repeat(1, 1fr);
   }
+  .technologies__cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
+
+@media screen and (max-width: 600px) {
+  .header__navbar>.container-content {
+    padding: 0;
+  }
+  .header__h1 {
+    font-size: 50px;
+    line-height: 66px;
+  }
+  
+  .header_p {
+    font-size: 18px;
+    line-height: 150%;
+  }
+
+  .contact-us__input {
+    width: 400px !important;
+  }
+}
+
+
 @media screen and (max-width: 430px) {
+  .header__h1 {
+    font-size: 34px;
+    line-height: 55px;
+  }
+
+  .header_p {
+    font-size: 14px;
+    line-height: 150%;
+  }
+
+
+  .contact-us__input {
+    width: 300px !important;
+  }
+
+  .mysidenav {
+    padding-top: 15px;
+  }
+
+  .mysidenav__link {
+    font-size: 18px;
+  }
+
   .capability__card {
     width: 100%;
     padding: 0px;
